@@ -54,8 +54,8 @@ class operationExcel:
     # 根据对应的caseID找到对应行内容
     def get_rows_data(self,case_id):
         table = self.table #获取表格内容
-        caseid_data = self.get_col_value()   #获取依赖CASEID的值
-        row_num = caseid_data.index(case_id)  #获取依赖CASEID行对应的行值
+        #caseid_data = self.get_col_value()   #获取依赖CASEID的值
+        row_num = self.get_col_value().index(case_id)  #获取依赖CASEID行对应的行值
         row_data = table.row_values(row_num)   # 获取依赖CASEID行对应的内容
         return row_data
     # def get_rows_data(self,case_id):
