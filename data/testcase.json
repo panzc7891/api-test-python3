@@ -1,0 +1,22 @@
+{
+"login":{"appKey":"xyhqfhnlqqvvotdipz","pwd":"123456","deviceId":"TRM10219120046","uname":"b0129"},
+"addgroup":{
+	"name":"123",
+	"nodes":[
+		{
+		"seq":"11",  
+		"lng":"11",  
+		"lat":"11",  
+		"height":"11"  
+		},
+		{  
+		"seq":1993,  
+		"lng":23.4043,  
+		"lat":113.4043,  
+		"height":3.4043  
+			}
+	]
+	
+},
+"login1":{"name": "panzc","pwd":"123123"}
+}
