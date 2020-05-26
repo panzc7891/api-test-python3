@@ -50,7 +50,6 @@ class operationExcel:
         new_workbook.save(self.filename)
         return None
 
-
     # 根据对应的caseID找到对应行内容
     def get_rows_data(self,case_id):
         table = self.table #获取表格内容

@@ -16,6 +16,7 @@ class global_var():
     request_data = '9' #请求数据
     excpect = '10' #期望结果
     results = '11' #实际结果
+    is_pass = '12' #是否通过
     def get_id_col(self):
         return int(global_var.id)
 
@@ -53,8 +54,12 @@ class global_var():
     def get_results_col(self):
         return int(global_var.results)
 
+    def get_is_pass_col(self):
+        return int(global_var.is_pass)
+
     def case_depend_col(self):
         return int(global_var.results)
+
 
 if __name__ == '__main__':
     res = global_var()
