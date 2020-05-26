@@ -45,12 +45,31 @@ class getresdata():
             return None
         else:
             return expect
-    #写入测试结果
+    #获取依赖数据的caseID
+    def get_dep_caseid(self,row):
+        col = self.glovar.get_case_dependid_col()
+        dep_caseid = self.operExcel.get_cell_value(row,col)
+        return dep_caseid
+
+    #获取依赖的数据取值的(jsonpath)
+    def get_dep_jsonpath(self,row):
+        col = self.glovar.get_data_dependjsonpath_col()
+        dep_jsonpath = self.operExcel.get_cell_value(row,col)
+        return dep_jsonpath
+    #获取依赖字段
+    def get_dep_file(self,row):
+        col = self.glovar.get_file_depend_col()
+        dep_file = self.operExcel.get_cell_value(row,col)
+        return dep_file
+    #写入实际返回结果
     def write_result(self,row,vlaues):
         col = self.glovar.get_results_col()
         self.operExcel.write_cell_data(row,col,vlaues)
+    #写入是否通过
+    def write_is_pass(self,row,values):
+        col = self.glovar.get_is_pass_col()
+        self.operExcel.write_cell_data(row,col,values)
 
-    #获取数据依赖ID
 if __name__ == '__main__':
     print(getresdata().get_expect(0))
 
