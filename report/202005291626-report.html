@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>接口测试报告</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" >
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .hidden-detail,.hidden-tr{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4" style='margin-left:3%;'>
+        <h1>测试报告</h1>
+        <table  class="table table-hover table-condensed">
+            <tbody>
+                <tr>
+                    <td><strong>开始时间:</strong>  2020-05-29 16:26:13</td>
+                </tr>
+                 <tr>
+                    <td><strong>开始时间:</strong>  2020-05-29 16:26:14</td>
+                </tr>
+                <tr>
+                    <td><strong>用例总数:</strong>  8</td>
+                </tr>
+                <tr>
+                    <td><strong>成功数量:</strong>  7</td>
+                </tr>
+                <tr style="color:red">
+                    <td><strong>失败数量:</strong>  1</td>
+                </tr>
+                <tr style="color:green">
+                    <td><strong>通过率:</strong>  0.88%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        <div class="row" style="margin:60px">
+    <div >
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" id="check-all" class="btn btn-primary"><strong>所有用例<strong></button>
+            <button type="button" id="check-success" class="btn btn-success"><strong>成功用例</button>
+            <button type="button" id="check-danger" class="btn btn-danger"><strong>失败用例</button>
+        </div>
+        <table  class="table table-hover table-condensed table-bordered" style="word-wrap:break-word; word-break:break-all;">
+            <thead>
+                <tr bgcolor="#3399FF">
+                    <td><strong>用例ID</td>
+                    <td><strong>用例名称</td>
+                    <td><strong>预期结果</td>
+                    <td  width="50%%"><strong>实际结果</td>
+                    <td><strong>是否通过</td>
+                </tr>
+                 
+         <tr class="case-tr success">
+            <td>c001</td>
+            <td>用户登录</td>
+            <td>"code": 1000</td>
+            <td>{
+  "code": 1000,
+  "message": "Success",
+  "result": {
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyIxIjp0cnVlLCIyIjp0cnVlLCIzIjp0cnVlLCI0Ijp0cnVlLCJjcmVhdGVUaW1lIjoxNTg5OTYwNTYxNTA4LCI1Ijp0cnVlLCJhcHBJZCI6MjMxNCwiaXNzIjoib3BlbkFwaSIsImFwcEtleSI6Inh5aHFmaG5scXF2dm90ZGlweiIsInVzZXJOYW1lIjoiYjAxMjkiLCJkZXZpY2VJZCI6IlRSTTEwMjE5MTIwMDQ2IiwidXNlckluZm9JZCI6MTQ5MH0.rX5ydhYdEEbUEx_ms2F9e01N16NDV-chLf2wNvzvTM8"
+  }
+}</td>
+            <td><font color='green'>Pass</td>
+         </tr>
+        
+         <tr class="case-tr success">
+            <td>c002</td>
+            <td>新增设备</td>
+            <td>"code": 1000</td>
+            <td>{
+  "code": 1000,
+  "message": "Success",
+  "result": true
+}</td>
+            <td><font color='green'>Pass</td>
+         </tr>
+        
+         <tr class="case-tr success">
+            <td>c003</td>
+            <td>获取电文RTK</td>
+            <td>"code": 1000</td>
+            <td>{
+  "code": 1000,
+  "message": "Success",
+  "result": {
+    "rtcmmsg": "D300133ED151027A956D20308C8C2D958005CA51709533E3BED300153EE151033A956D20308C8C2D958005CA51709500001876B2D300234091510E4750504E554C4C414E54454E4E4100000C5354415243415254205652530000E42A69D3005F4321516E3E0BC20020A200500800000000202001006DB64C47464547861AF8C198F2B905F0C20B701547E547BB720343B0F3BC66BBFA6FE3E6EC004290812311FF2B7BFB42D0859D023692F3D6DBCE056FFFFFFFFFF002D9B1BF0BF0B2C9809151FFD3005E43C151A9D0F08200208C40180000000000204000007FE8E8690948FBE05E60981D815EF2AA7F983F6111DB244A37B070C6BBDD8B216FE4060F16013600049FE1265E8489E20D43803949BEC37DFB5F65FFFFFFFFFE00635E96E35CD44F688D4912D300A84641516E3D31000020FDA6000000000000208200005B6DB6DAFAF6F10104F4F6F0F69C2F6B074A9DABD75C65152A285E31FBFA9EED3AA604CFFF56103BFAA1E003520F751BF3D78FA2C033504ADD4EBABD859C0927F78D87DD3BC1E044877BB6009FB801A33DFF3377F702069698191B00E6B703869FF5FA77D8AC602AC4809DD1F6D8CFDBB300666681B4C7FFFFFFFFFFFFFFFFFFFE000015D945D7DF35124D6596DB76155D7E0031D12B"
+  }
+}</td>
+            <td><font color='green'>Pass</td>
+         </tr>
+        
+         <tr class="case-tr success">
+            <td>c004</td>
+            <td>获取电文RTD</td>
+            <td>"code": 1000</td>
+            <td>{
+  "code": 1000,
+  "message": "Success",
+  "result": {
+    "rtcmmsg": "D300133ED151027A956D20308C8C2D958005CA51709533E3BED300153EE151033A956D20308C8C2D958005CA51709500001876B2D300234091510E4750504E554C4C414E54454E4E4100000C5354415243415254205652530000E42A69D3003F4321516E3E0BC20020A200500800000000200000007D311D19151E186BE30663CAE41616E3E54101ACEF10000040000100000400001000007FFFF82DC70C2CF5C3D9D3003F43C151A9D0F08200208C40180000000000200000007D1D0D21291F7C0BCC1303B02BDFF9808ED8DECD77B0000040000100000400001000007FFFF831D319A757E521D3007A4641516E3D31000020FDA6010800000000200000007FFBEBDBC40413D3DBC3DA72AA58BDAC1D2A76AF5D719454A8A149F5F78C73DDA04CF08187801EEBD78C19AF53A0B39CF8FD97C000010000040000100000400001000004000010000040000100000400001000007FFFFFFFFFFF8005745F34965B7557D1886F49A1"
+  }
+}</td>
+            <td><font color='green'>Pass</td>
+         </tr>
+        
+         <tr class="case-tr danger">
+            <td>c005</td>
+            <td>VRS上传GGA</td>
+            <td>"code": 1001</td>
+            <td>{
+  "code": 1000,
+  "message": "Success",
+  "result": true
+}</td>
+            <td><font color='red'>Fail</td>
+         </tr>
+        
+         <tr class="case-tr success">
+            <td>c006</td>
+            <td>设备上传GGA</td>
+            <td>"code": 1000</td>
+            <td>{
+  "code": 1000,
+  "message": "Success",
+  "result": null
+}</td>
+            <td><font color='green'>Pass</td>
+         </tr>
+        
+         <tr class="case-tr success">
+            <td>c007</td>
+            <td>获取最新位置</td>
+            <td>"code": 1000</td>
+            <td>{
+  "code": 1000,
+  "message": "Success",
+  "result": {
+    "fix_level": "-1",
+    "lng": 0.0,
+    "create_time": "2020-05-29 16:26:12",
+    "timestam": "20200529162612",
+    "online": 1,
+    "dip": 0.0,
+    "lat": 0.0,
+    "height": 0.0
+  }
+}</td>
+            <td><font color='green'>Pass</td>
+         </tr>
+        
+         <tr class="case-tr success">
+            <td>c009</td>
+            <td>VRS账号登录2</td>
+            <td>"status": "004"</td>
+            <td>{
+  "msg": "\u767b\u5f55\u6210\u529f\uff01",
+  "sessionId": 6248019,
+  "userInfoId": 7155,
+  "status": "004"
+}</td>
+            <td><font color='green'>Pass</td>
+         </tr>
+        </div></div></table><script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $("#check-danger").click(function(e){
+        $(".case-tr").removeClass("hidden-tr");
+        $(".success").addClass("hidden-tr");
+    });
+    $("#check-success").click(function(e){
+        $(".case-tr").removeClass("hidden-tr");
+        $(".danger").addClass("hidden-tr");
+    });
+    $("#check-all").click(function(e){
+        $(".case-tr").removeClass("hidden-tr");
+    });
+</script>
+</body></html>

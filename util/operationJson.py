@@ -1,29 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-Created on 2020-05-08
+Created on 2020-01-08
 @author: panzhaochao
 """
 import json
+from common.GetConfData import getConfingdata
 class operationjson():
-    def __init__(self,filename=None):
-        if filename:
-            self.filename = filename
-        else:
-            self.filename = r'D:\PyCharmProject\api-test-python3\data\testcase.json'
+    def __init__(self):
+        filenamepath = 'filenamepath'
+        jsonname = 'jsonname'
+        self.filename = getConfingdata().get_conf_data(filenamepath,jsonname)
         self.jsondata = self.get_json_data()
     def get_json_data(self):
-        with open(self.filename,'r') as f:
-            jsons = json.load(f)  #转字典
-            #jsons = f.read()  #原输出json字符串
-            return jsons
+        try:
+            with open(self.filename,'r') as f:
+                jsons = json.load(f)  #转字典
+                return jsons
+        except Exception as e:
+            return ('读取json文件失败：%s'%e)
     def get_josn_key_data(self,key):
         value = self.jsondata[key]
         return value
-if __name__ == '__main__':
-    js = operationjson()
-    jsons = js.get_json_data()
-    value = js.get_josn_key_data('login')
-    print(jsons)
-    print(type(jsons))
-    print(value)
-    print(type(value))

@@ -4,7 +4,7 @@ Created on 2020-05-08
 @author: panzhaochao
 """
 class judgestr():
-    def __init__(self,str1,str2):
+    def __init__(self,str1=None,str2=None):
         self.str1 = str1
         self.str2 = str2
     def includestr(self):
@@ -24,12 +24,13 @@ class judgestr():
             return True
         else:
             return False
-
-if __name__ == '__main__':
-    str1 = 'name'
-    str2 = 'a'
-    res = judgestr(str1,str2)
-    print(res.includestr())
-    print(res.equalstr())
+    def judge_number(self,_list,key):
+        """
+        #判断列表中元素的某个元素的个数
+        """
+        dict = {}
+        for i in _list:
+            dict[i] = dict.get(i,0)+1
+        return dict[key]
 
 
